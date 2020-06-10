@@ -1,0 +1,22 @@
+{
+  "name": "employee-summary",
+  "version": "1.0.0",
+  "description": "Employee Summary Week 10 Homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shannontrainor/employee-summary.git"
+  },
+  "keywords": [
+    "employee-summary"
+  ],
+  "author": "Shannon Trainor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shannontrainor/employee-summary/issues"
+  },
+  "homepage": "https://github.com/shannontrainor/employee-summary#readme"
+}
