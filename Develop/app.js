@@ -10,6 +10,86 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+//create Manager
+function getManager() {
+    //prompt questions to fill in manager info
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "managerName",
+            message: "What is your manager's name?"
+        },
+        {
+            type: "input",
+            name: "managerEmail",
+            message: "What is your manager's email?"
+        },
+        {
+            type: "input",
+            name: "managerId",
+            message: "What is your manager's ID number?"
+        },
+        {
+            type: "input",
+            name: "managerOfficeNumber",
+            message: "What is your manager's Office Number?"
+        }
+    ]);
+};
+
+//create Engineer
+function getEngineer() {
+    //prompt questions to fill in engineer info
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "engineerName",
+            message: "What is your Engineer's name?"
+        },
+        {
+            type: "input",
+            name: "engineerEmail",
+            message: "What is your Engineer's email?"
+        },
+        {
+            type: "input",
+            name: "engineerId",
+            message: "What is your Engineer's ID?",
+        },
+        {
+            type: "input",
+            name: "engineerGithub",
+            message: "What is your Engineer's Github username?"
+        }
+    ]);
+}
+
+//create Intern
+function getIntern() {
+    //prompt questions to fill in intern info
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "internName",
+            message: "What is your Intern's name?"
+        },
+        {
+            type: "input",
+            name: "internEmail",
+            message: "What is your Intern's email?"
+        },
+        {
+            type: "input",
+            name: "internId",
+            message: "What is your Intern's ID?",
+        },
+        {
+            type: "input",
+            name: "internSchool",
+            message: "What is your Intern's school?"
+        }
+    ]);
+}
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
