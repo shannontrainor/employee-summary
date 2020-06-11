@@ -10,6 +10,8 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+//empty array for employees to store
+const employeeTeam = [];
 //create Manager
 function getManager() {
     //prompt questions to fill in manager info
@@ -40,8 +42,9 @@ function getManager() {
             answers.managerName,
             answers.managerEmail,
             answers.managerId,
-            answers.managerOfficeNumber
-        ); 
+            answers.managerOfficeNumber);
+        employeeTeam.push(manager); //push manager data to array
+        buildEmployees();  //call build function
     });
 };
 
@@ -75,10 +78,10 @@ function getEngineer() {
             answers.engineerName,
             answers.engineerEmail,
             answers.engineerId,
-            answers.engineerGithub
-        ); 
+            answers.engineerGithub);
+        employeeTeam.push(engineer); //push engineer data to array
+            buildEmployees();  //call build function
     });
-
 }
 
 //create Intern
@@ -111,8 +114,9 @@ function getIntern() {
             answers.internName,
             answers.internEmail,
             answers.internId,
-            answers.internSchool
-        ); 
+            answers.internSchool);
+        employeeTeam.push(intern); //push intern data to array
+        buildEmployees();  //call build function
     });
 
 };
@@ -122,7 +126,7 @@ function getTeam (){
     //prompts to add team member
     inquirer.prompt ([
         {
-            type: "input",
+            type: "list",
             name: "addEmployee",
             message: "What type of employee would you like to add?",
             choices: ["Manager", "Engineer", "Intern", "None"]
@@ -140,6 +144,12 @@ function getTeam (){
     })
 }
 
+getTeam();
+
+
+function buildEmployees() {
+    fs.writeFileSync(outputPath, render(employeeTeam));
+};
 
 
 // //call get functions
