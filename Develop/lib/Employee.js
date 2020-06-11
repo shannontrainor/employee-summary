@@ -12,6 +12,27 @@ class Employee {
         this.email = email;
         this.id = id;
     }
+
+    //call functions from HTML renderer to return data
+    getName() {
+        return this.name;
+    };
+
+    getRole () {
+        return this.role;
+    };
+
+    getEmail () {
+        return this.email;
+    };
+
+    getId () {
+        return this.id;
+    };
+
+
 }
+
+
 
 module.exports = Employee;

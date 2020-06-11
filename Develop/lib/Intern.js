@@ -18,6 +18,17 @@ class Intern extends Employee {
         );
         this.school = school;
     }
+
+
+    //call functions from HTML renderer to return cata
+    getRole () {
+        return this.role;
+    };
+
+    getSchool () {
+        return this.school;
+    };
+
 }
 
 module.exports = Intern;

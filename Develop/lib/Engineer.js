@@ -18,6 +18,15 @@ class Engineer extends Employee {
         );
         this.github = github;
     }
+
+    //call functions from HTML renderer to return data
+    getRole (){
+        return this.role;
+    };
+
+    getGithub () {
+        return this.github;
+    };
 }
 
 module.exports = Engineer;
