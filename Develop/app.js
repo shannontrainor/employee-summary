@@ -34,7 +34,15 @@ function getManager() {
             name: "managerOfficeNumber",
             message: "What is your manager's Office Number?"
         }
-    ]);
+        //get answers
+    ]).then(answers => {
+        const manager = new Manager (
+            answers.managerName,
+            answers.managerEmail,
+            answers.managerId,
+            answers.managerOfficeNumber
+        ); 
+    });
 };
 
 //create Engineer
@@ -61,7 +69,16 @@ function getEngineer() {
             name: "engineerGithub",
             message: "What is your Engineer's Github username?"
         }
-    ]);
+        //get answers
+    ]).then(answers => {
+        const engineer = new Engineer (
+            answers.engineerName,
+            answers.engineerEmail,
+            answers.engineerId,
+            answers.engineerGithub
+        ); 
+    });
+
 }
 
 //create Intern
@@ -88,7 +105,16 @@ function getIntern() {
             name: "internSchool",
             message: "What is your Intern's school?"
         }
-    ]);
+        //get answers
+    ]).then(answers => {
+        const intern = new Intern (
+            answers.internName,
+            answers.internEmail,
+            answers.internId,
+            answers.internSchool
+        ); 
+    });
+
 }
 
 // Write code to use inquirer to gather information about the development team members,
