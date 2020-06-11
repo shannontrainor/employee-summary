@@ -21,7 +21,7 @@ class Manager extends Employee {
 
     //call functions from HTML renderer to return data
     getRole () {
-        return this.name;
+        return "Manager";
     };
 
     get officeNumber() {

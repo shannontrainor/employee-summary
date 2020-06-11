@@ -21,7 +21,7 @@ class Engineer extends Employee {
 
     //call functions from HTML renderer to return data
     getRole (){
-        return this.role;
+        return "Engineer";
     };
 
     getGithub () {

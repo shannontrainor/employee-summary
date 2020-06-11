@@ -22,7 +22,7 @@ class Intern extends Employee {
 
     //call functions from HTML renderer to return cata
     getRole () {
-        return this.role;
+        return "Intern";
     };
 
     getSchool () {
