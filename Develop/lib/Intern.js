@@ -20,9 +20,4 @@ class Intern extends Employee {
     }
 }
 
-
-// name
-// role
-// email
-// id
-// school
+module.exports = Intern;

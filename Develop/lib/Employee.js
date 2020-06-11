@@ -14,8 +14,4 @@ class Employee {
     }
 }
 
-
-//name
-//role
-//email
-//id
+module.exports = Employee;

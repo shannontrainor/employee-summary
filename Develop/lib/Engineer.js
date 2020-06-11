@@ -20,8 +20,4 @@ class Engineer extends Employee {
     }
 }
 
-// name
-// role
-// email
-// id
-// github
+module.exports = Engineer;

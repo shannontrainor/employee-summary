@@ -20,8 +20,4 @@ class Manager extends Employee {
     };
 }
 
-// name
-// role
-// email
-// id
-// office number
+module.exports = Manager;
