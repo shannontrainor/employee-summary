@@ -117,10 +117,35 @@ function getIntern() {
 
 };
 
-//call get functions
-getManager();
-getEngineer();
-getIntern();
+//create Team of employees
+function getTeam (){
+    //prompts to add team member
+    inquirer.prompt ([
+        {
+            type: "input",
+            name: "addEmployee",
+            message: "What type of employee would you like to add?",
+            choices: ["Manager", "Engineer", "Intern", "None"]
+        }
+        //switch case to add member depending on user answer to prompt
+    ]).then(choice => {
+        switch(choice){
+            case "Manager":
+            getManager();
+            case "Engineer":
+            getEngineer();
+            case "Intern":
+            getIntern();
+        }
+    })
+}
+
+
+
+// //call get functions
+// getManager();
+// getEngineer();
+// getIntern();
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
